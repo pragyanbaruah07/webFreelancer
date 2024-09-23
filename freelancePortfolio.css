@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lilita+One&family=Pacifico&family=Playwrite+CU:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rye&display=swap');
+
+/*Freelancer Portfolio Animations Styling*/
+/* Pop-Left and Pop-Right Initial State */
+.pop-left, .pop-right {
+    opacity: 0;
+    transform: translateX(100%); /* For right */
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+  }
+  
+  /* Pop-Left */
+  .pop-left {
+    transform: translateX(-100%); /* Move it left off-screen */
+  }
+  
+  /* Pop-Right */
+  .pop-right {
+    transform: translateX(100%); /* Move it right off-screen */
+  }
+  
+  /* When the element comes into view, apply this */
+  .visible.pop-left {
+    transform: translateX(0); /* Move back to its original position */
+    opacity: 1;
+  }
+  
+  .visible.pop-right {
+    transform: translateX(0); /* Move back to its original position */
+    opacity: 1;
+  }
+  
+  
+  
+  .pop-in {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+  }
+  
+  .pop-in.visible {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+
+
+/*Freelancer Portfolio Navbar Styling*/
+.navbar-containerr{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100vw !important; 
+    z-index: 1000; /* Ensures the navbar stays on top */
+}
+
+.logo{
+    height: 77px;
+    width: 99px;
+}
+
+#nav-item-1{
+    font-family: "Raleway", system-ui;
+    font-size: 33px;
+    color: white;
+}
+
+#nav-item-2{
+    font-family: "Raleway", system-ui;
+    font-size: 33px;
+    color: white;
+}
+
+
+#nav-item-3{
+    font-family: "Raleway", system-ui;
+    font-size: 33px;
+    color: white;
+}
+
+
+#nav-item-4{
+    font-family: "Raleway", system-ui;
+    font-size: 33px;
+    color: white;
+}
+
+#nav-item-5{
+  font-family: "Raleway", system-ui;
+  font-size: 33px;
+  color: white;
+}
+
+.active-link{
+    color: rgb(204, 175, 9);
+    text-decoration: underline;
+}
+
+
+/*Freelancer Portfolio Banner Styling*/
+.banner-container{
+    background-image: url("https://img.freepik.com/free-photo/triangular-shaped-futuristic-hallway-with-glowing-golden-lights_181624-20269.jpg?ga=GA1.1.511339307.1716481744&semt=ais_hybrid");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.banner-text{
+    font-family: "Raleway", system-ui;
+    font-size: 33px;
+    color: white;
+}
+
+.special-text{
+    font-family: "Raleway", system-ui;
+    font-size: 44px;
+    color: rgb(168, 144, 4);
+}
+
+.dark-overlay {
+    position: relative;
+    z-index: 1; /* Ensure content is above the overlay */
+  }
+  
+  .dark-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust opacity to control darkness */
+    z-index: -1; /* Ensure the overlay is behind the content */
+  }
+  
+
+
+  /*Freelancer Portfolio About Styling*/
+  .about-container{
+    padding: 11px;
+  }
+
+  .about-skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .about-card-name{
+    font-family: "Raleway", system-ui;
+    font-size: 55px;
+    font-weight: 900;
+    color: rgb(46, 40, 4);
+    text-align: center;
+  }
+
+  .about-skill-card{
+    margin: 11px;
+    padding: 11px;
+  }
+
+  .about-skill-name{
+    font-family: "Raleway", system-ui;
+    font-size: 17px;
+    font-weight: 900;
+    color: rgb(138, 123, 37);
+  }
+
+  .skill-bar{
+    background-color: rgba(0, 0, 0);
+    height: 11px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .bar{
+    background-color: rgb(255, 230, 0);
+    height: 11px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .about-img{
+    background-image: url("https://img.freepik.com/free-photo/person-experiencing-spiritual-awakening_23-2150771715.jpg?ga=GA1.1.511339307.1716481744&semt=ais_hybrid");
+    background-size: cover;
+    min-height: 444px;
+  }
+
+  .about-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .details-sub-head{
+    font-family: "Raleway", system-ui;
+    font-size: 17px;
+    font-weight: 900;
+    color: rgb(46, 40, 4);
+  }
+
+  .details-main-head{
+    font-family: "Raleway", system-ui;
+    font-size: 33px;
+    background-color: rgb(46, 40, 4);
+    color: white;
+    padding: 11px;
+  }
+
+  .details-body-head{
+    font-family: "Raleway", system-ui;
+    font-size: 27px;
+    font-weight: 700;
+    color: rgb(46, 40, 4);
+  }
+
+  .details-body-head{
+    font-family: "Raleway", system-ui;
+    font-size: 22px;
+    color: rgb(46, 40, 4);
+  }
+
+  .details-body-para{
+    font-family: "Raleway", system-ui;
+    font-size: 15px;
+    font-weight: 700;
+    color: black;
+  }
+
+
+  /*Freelancer Portfolio Projects Styling*/
+
+  .my-work-container{
+    background-color: rgb(65, 55, 31);
+  }
+
+  .main-head{
+    font-family: "Raleway", system-ui;
+    font-size: 33px;
+    font-weight: 900;
+    color: rgb(46, 40, 4);
+    text-align: center;
+  }
+
+  .my-work-card{
+    border: 2px solid rgb(124, 97, 28);
+    margin: 11px;
+  }
+  
+  .my-work-name{
+    font-family: "Raleway", system-ui;
+    font-size: 22px;
+    font-weight: 900;
+    color: goldenrod;
+    cursor: pointer;
+  }
+
+  /* From Uiverse.io by codebykay101 */ 
+.mw-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mw-container .glass {
+    position: relative;
+    width: 180px;
+    height: 200px;
+    background: linear-gradient(#fff2, transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    margin: 0 -45px;
+    backdrop-filter: blur(10px);
+    transform: rotate(calc(var(--r) * 1deg));
+  }
+  
+  .mw-container:hover .glass {
+    transform: rotate(0deg);
+    margin: 0 10px;
+  }
+  
+  .mw-container .glass::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  .mw-container .glass svg {
+    font-size: 2.5em;
+    fill: #fff;
+  }
+  
+
+  /*Freelancer Services Styling*/
+
+  .service-icon{
+    font-size: 44px;
+    color: rgb(46, 40, 4);
+    border: 2px solid rgb(46, 40, 4);
+    border-radius: 50%;
+    padding: 11px;
+  }
+
+  .service-name{
+    font-family: "Raleway", system-ui;
+    font-size: 22px;
+    font-weight: 900;
+    color: rgb(46, 40, 4);
+  }
+
+  .service-details{
+    font-family: "Raleway", system-ui;
+    font-size: 17px;
+    color: rgb(46, 40, 4);
+  }
+
+
+  /*Freelancer Contact Styling*/
+  .contact-container{
+    background-color: rgb(65, 55, 31);
+  }
+
+  .contact-head{
+    font-family: "Raleway", system-ui;
+    font-size: 44px;
+    font-weight: 900;
+    color: white;
+  }
+
+  .contact-icon{
+    font-size: 22px;
+    padding: 11px;
+    color: white;
+  }
+
+  .contact-cp{
+    font-family: "Raleway", system-ui;
+    font-size: 22px;
+  }
+
+  body{
+    overflow-x: hidden !important;
+  }
+
+
+  @media (min-width: 576px){
+    .a-card{
+        height: 100vh;
+    }
+  }
